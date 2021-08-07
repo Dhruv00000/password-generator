@@ -1,5 +1,5 @@
 // Importing the necessary functions from modules.
-const ps = require("prompt-sync")
+const ps = require("prompt-sync")()
 prompt = ps
 
 function randInt(min, max) {
