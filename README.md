@@ -1,4 +1,3 @@
-This program will generate a password of a given length.
 
 # How to run
 
