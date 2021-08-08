@@ -10,7 +10,14 @@ try:
     special = input("Enter yes if you want special characters in the password and enter no if not: ").lower()
     whitespaces = input("Enter yes if you want spaces in your password and no if not: ").lower()
     numbers = input("Enter yes if you want numbers in your password and no if not: ").lower()
-    characters = input("Enter yes if you want characters in your password and no if not: ").lower
+    characters = input("Enter yes if you want characters in your password and no if not: ").lower()
+    
+    custom = input("Enter any custom characters separated by a comma (leave blank if you dont want custom characters): ")
+    
+    if "," in custom:
+        
+        customWords = custom.split(",")
+        printable += customWords
 
     if special != "no":
 
