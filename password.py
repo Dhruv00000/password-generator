@@ -39,7 +39,7 @@ try:
         
         print("You must select something to add in your password.")
 
-    password = " "
+    password = ""
         
     # Selects a random valid character and adds it to the password.
     for _ in range(length):
