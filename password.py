@@ -1,7 +1,7 @@
 # Importing the necessary functions from the modules.
 from random import choice
 
-printable = []
+chars = []
 
 try:
 
@@ -17,31 +17,29 @@ try:
     if "," in custom:
 
         customWords = custom.split(",")
-        printable += customWords
+        chars += customWords
 
     if special != "no":
 
-        printable += ["!","#","$","%","&","*","+","-",".","/",":",";","<","=",">","?","@","^","_",",","|"]
+        chars += ["!","#","$","%","&","*","+","-",".","/",":",";","<","=",">","?","@","^","_",",","|"]
 
     if numbers != "no":
 
-        printable += ["0","1","2","3","4","5","6","7","8","9"]
+        chars += ["0","1","2","3","4","5","6","7","8","9"]
 
     if whitespaces == "yes":
 
-        printable += [" "]
+        chars += [" "]
 
     if characters != "no":
 
-        printable += ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q",'r',"s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+        chars += ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q",'r',"s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
     if special == "no" and numbers == "no" and whitespaces == "no" and characters == "no":
 
         print("You must select something to add in your password.")
 
-    password = "".join(choice(choice(printable)) for _ in range(length))
-
-    print(f"The password is {password}")
+    print(f"The password is {''.join(choice(choice(chars)) for _ in range(length))}")
 
 except ValueError:
 
